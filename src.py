@@ -70,19 +70,19 @@ averages = hour_and_durations_sumsav.mapValues(lambda x: x[0] / x[1]).cache()
 trace1 = go.Bar(
     x=[t for t in hours_results.keys().toLocalIterator()],
     y=[t for t in hours_results.values().toLocalIterator()],
-    name="Overall"
+    name="Busiest hours overall"
 )
 
 trace2 = go.Bar(
     x=[t for t in hours_results_weekend.keys().toLocalIterator()],
     y=[t for t in hours_results_weekend.values().toLocalIterator()],
-    name="Weekdays"
+    name="Busiest hours on weekends"
 )
 
 trace3 = go.Bar(
     x=[t for t in averages.keys().toLocalIterator()],
     y=[t for t in averages.values().toLocalIterator()],
-    name="Hours with longes rides"
+    name="Hours with longest rides"
 )
 
 fig = tools.make_subplots(rows=3, cols=1)
