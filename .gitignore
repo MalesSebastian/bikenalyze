@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# generated template
+temp-plot.html
+
+# Spark-related files and folders
+derby.log
+megastore_db/
